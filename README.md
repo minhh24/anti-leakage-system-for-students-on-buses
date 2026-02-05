@@ -5,7 +5,7 @@
 
 ---
 
-##  Giới thiệu (Overview)
+##  Giới thiệu 
 Dự án này là một hệ thống nhúng được xây dựng trên nền tảng **Arduino Mega 2560**, nhằm mục đích giám sát và phát hiện sự hiện diện của học sinh còn lại trên xe buýt sau khi xe đã tắt máy. Hệ thống sử dụng kết hợp **cảm biến siêu âm** (Ultrasonic) và **cảm biến chuyển động** (PIR) để quét khoang xe và đưa ra cảnh báo chính xác, giúp ngăn chặn các tai nạn đáng tiếc do bỏ quên học sinh.
 
 ###  Tính năng chính (Key Features)
@@ -16,8 +16,7 @@ Dự án này là một hệ thống nhúng được xây dựng trên nền t�
 
 ---
 
-##  Phần cứng yêu cầu (Hardware Requirements)
-
+##  Phần cứng yêu cầu 
 | STT | Tên linh kiện | Số lượng | Ghi chú |
 |:---:|:---|:---:|:---|
 | 1 | **Arduino Mega 2560** | 1 | Vi điều khiển trung tâm |
@@ -29,7 +28,7 @@ Dự án này là một hệ thống nhúng được xây dựng trên nền t�
 
 ---
 
-##  Sơ đồ đấu nối (Pinout)
+##  Sơ đồ đấu nối
 
 Hệ thống được kết nối với **Arduino Mega 2560** theo sơ đồ chân dưới đây:
 
@@ -41,7 +40,7 @@ Hệ thống được kết nối với **Arduino Mega 2560** theo sơ đồ ch�
 | **SDA** | **20 (SDA)** | Giao tiếp I2C |
 | **SCL** | **21 (SCL)** | Giao tiếp I2C |
 
-### 2. Cảm biến (Sensors)
+### 2. Cảm biến 
 | Thiết bị | Chân thiết bị | Chân Arduino Mega |
 |:---|:---|:---|
 | **Cảm biến 1 (HC-SR04)** | Trig | **48** |
@@ -54,7 +53,7 @@ Hệ thống được kết nối với **Arduino Mega 2560** theo sơ đồ ch�
 
 ---
 
-##  Hướng dẫn Cài đặt & Nạp code (Installation)
+##  Hướng dẫn Cài đặt & Nạp code 
 
 ### Bước 1: Cài đặt thư viện
 Để biên dịch được dự án, bạn cần cài đặt thư viện điều khiển màn hình LCD I2C:
@@ -75,7 +74,7 @@ Kết nối các linh kiện theo bảng **Sơ đồ đấu nối** ở trên. �
 
 ---
 
-##  Lưu ý quan trọng (Troubleshooting)
+##  Lưu ý quan trọng 
 
 ### Vấn đề địa chỉ I2C của màn hình LCD
 Mặc định trong mã nguồn đang thiết lập địa chỉ LCD là `0x3F`. Tuy nhiên, các màn hình trên thị trường thường có hai loại địa chỉ phổ biến là `0x3F` hoặc `0x27`.
