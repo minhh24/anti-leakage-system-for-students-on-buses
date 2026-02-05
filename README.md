@@ -16,7 +16,7 @@ Dự án này là một hệ thống nhúng được xây dựng trên nền t�
 
 ---
 
-## 🛠️ Phần cứng yêu cầu (Hardware Requirements)
+##  Phần cứng yêu cầu (Hardware Requirements)
 
 | STT | Tên linh kiện | Số lượng | Ghi chú |
 |:---:|:---|:---:|:---|
