@@ -5,7 +5,6 @@
 // Cấu hình module SIM (RX=2, TX=3)
 SoftwareSerial mySerial(2, 3); 
 
-// Cấu hình LCD (Địa chỉ thường là 0x27 hoặc 0x3F. Trong ảnh là 0x3F)
 LiquidCrystal_I2C lcd(0x3F, 16, 2); 
 
 // --- KHAI BÁO CHÂN CẢM BIẾN ---
@@ -67,10 +66,9 @@ void loop() {
   docb5();
   docb6();
   
-  // Đọc cảm biến chuyển động (PIR)
+  // Đọc cảm biến chuyển động (PiR)
   val = digitalRead(inputPin);
   
-  // Hiển thị lên LCD (có thể cần chỉnh lại tọa độ cho đẹp mắt hơn)
   lcd.clear(); // Xóa màn hình trước khi in mới
   
   lcd.setCursor(0, 0); lcd.print(distance1);
@@ -98,7 +96,7 @@ void loop() {
   {
       delay(1000); // Chờ xác nhận
       
-      // Đọc lại lần nữa để chắc chắn (chống nhiễu)
+      // Đọc lại lần nữa để chắc chắă
       val = digitalRead(inputPin);
       docb1(); docb2(); docb3(); docb4(); docb5(); docb6();
       
@@ -115,7 +113,7 @@ void loop() {
               goidien(); // Gọi điện thoại cảnh báo
               digitalWrite(led, HIGH); // Bật đèn báo
               
-              // Kích hoạt chân 'at' (coi/relay)
+              // Kích hoạt chân 'at' (coi /re lay)
               digitalWrite(at, HIGH);
               delay(200);
               digitalWrite(at, LOW);
@@ -136,7 +134,7 @@ void loop() {
   }
 }
 
-// --- CÁC CHƯƠNG TRÌNH CON ĐỌC CẢM BIẾN ---
+// --- CÁC CHƯƠNG TRÌ NH CON ĐỌC CẢM BIẾN ---
 
 void docb1() {
   digitalWrite(trig1, LOW); delayMicroseconds(2);
@@ -186,7 +184,7 @@ void docb6() {
   distance6 = int(duration6 / 2 / 29.412);
 }
 
-// --- CHƯƠNG TRÌNH CON GỌI ĐIỆN ---
+// --- CHƯƠNG TRÌNH CON  GỌI ĐIỆN ---
 void goidien() {
   // Lệnh AT để gọi điện
   mySerial.println("ATD+84963118387;"); // Số điện thoại trong ảnh
@@ -194,3 +192,4 @@ void goidien() {
   delay(7000); // Chờ 7 giây cho cuộc gọi kết nối
   mySerial.println();
 }
+
